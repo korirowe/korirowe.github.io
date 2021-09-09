@@ -1,1 +1,0 @@
-# korirowe.github.io
