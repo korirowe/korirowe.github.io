@@ -14,7 +14,7 @@
 <body>
   <div class="quarter-x quarter-y justify-content-center">
     <div class="form-group">
-      <input type="password" class="form-control" placeholder="Password" id="password">
+      <input type="password" class="form-control" placeholder="Password" id="password" autofocus>
     </div>
     <div class="mt-4" style="margin-left: 32.5%; margin-right: 32.5%;">
       <button class="btn btn-primary btn-block" onclick="myFunction()">Enter</button>
@@ -29,6 +29,14 @@
         document.getElementById("password").value = "";
       }
     }
+    
+    var input = document.getElementById("password");
+    input.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("button").click();
+      }
+    });
   </script>
 </body>
 </html>
